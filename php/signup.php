@@ -29,6 +29,10 @@
                     if(in_array($img_ext, $extensions)){
                         $time = time(); //making unique id
                         $new_img_name = $time.$img_name;
+                        if (is_dir('images') === false) {
+                            mkdir('images');
+                        }
+
                         if(move_uploaded_file($tmp_name, 'images/'.$new_img_name)){
                             $status = 'Active now';
                             $unique_id = rand(time(), 10000000);
