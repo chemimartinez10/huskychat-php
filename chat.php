@@ -29,7 +29,7 @@
             <form action="#" class="typing-area" autocomplete="false">
                 <input type="hidden" name="outgoing_id" value="<?php echo $_SESSION['unique_id']?>">
                 <input type="hidden" name="incoming_id" value="<?php echo $user_id ?>">
-                <input id="messageInput" type="text" name="message" placeholder="Type a mesage here...">
+                <input id="messageInput" type="text" name="message" placeholder="Type a mesage here..." autocomplete="false">
                 <button type="submit">
                     <i class="fab fa-telegram-plane"></i>
                 </button>
