@@ -5,7 +5,7 @@ made with vanilla javascript, php and mysql
 
 # Preview images
 
-![prev](preview/chat.png)
 ![prev](preview/chat1.png)
 ![prev](preview/chat2.png)
 ![prev](preview/chat3.png)
+![prev](preview/chat.png)
