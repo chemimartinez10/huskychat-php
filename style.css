@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;    
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f7f7f7;
+}
+
+.wrapper{
+    background-color: rgba(255, 255, 255, .5) ;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, .5);
+    /* backdrop-filter: blur(40px); */
+}
+
+/*SIGNUP CSS*/
+
+.form{
+    padding: 25px 30px;
+}
+
+.form header{
+    font-size: 2em;
+    font-weight: 700;
+    padding-bottom: .7em;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.form form{
+    margin: 20px 0;
+}
+
+.form form .error-txt{
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+.form form .field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form form .field input{
+    outline: none;
+}
+.form form .field i{
+    position: absolute;
+    top: 70%;
+    right: 15px;
+    cursor: pointer;
+    color: #ccc;
+    transform: translateY(-50%);
+}
+.form form .field i.active::before{
+    color: #333;
+    content: "\f070";
+}
+.form form .image input{
+    font-size: 17px;
+}
+.form form .button input{
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    background: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form .link{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+.form .link a{
+    color: #333;
+}
+.form .link a:hover{
+    text-decoration: underline;
+}
+.form form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.form form .name-details{
+    display: flex;
+}
+.form form .field:first-child{
+    margin-right: 10px;
+}
+.form form .field:last-child{
+    margin-left: 10px;
+}
+
+/* USERS CSS CODE */
+
+.users{
+    padding: 25px 30px;
+}
+.users header,
+.users-list a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.wrapper img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+:is(.users, .users-list) .content{
+    display: flex;
+    align-items: center;
+}
+.users header .content img{
+    width: 50px;
+    height: 50px;
+}
+:is(.users, .users-list) .content .details{
+    margin-left: 15px;
+    color: #000;
+}
+:is(.users, .users-list) .details span{
+    font-size: 1.15em;
+    font-weight: 500;
+}
+.users header a{
+    color: #fff;
+    background-color: #333;
+    padding: 7px 15px;
+    font-size: 1.05em;
+    border-radius: 5px;
+}
+.users .search{
+    margin: 1.25em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.users .search .text{
+    font-size: 1.15em;
+}
+.users .search input{
+    position: absolute;
+    height: 42px;
+    border-radius: 5px 0 0 5px;
+    width: calc(100% - 50px);
+    font-size: 1em;
+    padding: 0 13px;
+    outline: none;
+    border: 1px solid #ccc;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+.users .search input.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.users .search button{
+    width: 47px;
+    height: 42px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    outline: none;
+    color: #333;
+    background-color: transparent;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.users .search button.active{
+    color: #fff;
+    background-color: #333;
+}
+.users .search button.active i::before{
+    content: "\f00d";
+}
+.users-list{
+    max-height: 350px;
+    overflow-y: auto;
+}
+:is(.users-list, .chat-box)::-webkit-scrollbar{
+    width: 0;
+}
+.users-list a{
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    padding-right: 15px;
+    border-bottom-color: #f1f1f1;
+}
+.users-list a:last-child{
+    margin-bottom: 0px;
+    border: none;
+}
+.users-list a .content p{
+    color: #676767;
+}
+.users-list a .content img{
+    width: 40px;
+    height: 40px;
+}
+.users-list a .status-dot{
+    font-size: .75em;
+    color: #468669;
+}
+.users-list a .status-dot.offline{
+    color: #ccc;
+}
+
+/* CHAT AREA CSS */
+
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+    position: relative;
+}
+.chat-area header img{
+    width: 45px;
+    height: 45px;
+    margin: 0 15px;
+}
+
+.chat-area header span{
+    font-size: 1.15em;
+    font-weight: 500;
+}
+.chat-area header .back-icon{
+    color: #333;
+    font-size: 1.15em;
+}
+.chat-box{
+    height: 500px;
+    background-color: #f7f7f7;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 /5%), inset 0 -32px 32px -32px rgb(0 0 0 /5%);
+    overflow-y: auto;
+}
+
+.chat-box .chat{
+    margin: 15px 0;
+}
+.chat-box .chat p{
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 /8%), 0 16px 16px -16px rgb(0 0 0 /10%);
+}
+
+.chat-box .outgoing{
+    display: flex;
+}
+
+.outgoing .details{
+    max-width: calc(100% - 130px);
+    margin-left: auto;
+}
+.outgoing .details p{
+    color: #fff;
+    background-color: #333;
+    border-radius: 18px 18px 0 18px;
+}
+.chat-box .incoming img{
+    width: 35px;
+    height: 35px;
+}
+.chat-box .incoming{
+    display: flex;
+    align-items: center;
+}
+.incoming .details{
+    max-width: calc(100% - 130px);
+    margin-left: 10px;
+    margin-right: auto;
+}
+.incoming .details p{
+    background-color: #fff;
+    border-radius: 18px 18px 18px 0;
+}
+.chat-area .typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typing-area input{
+    height: 45px;
+    width: calc(100% - 58px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 17px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.typing-area button{
+    width: 55px;
+    color: #fff;
+    background-color: #333;
+    outline: none;
+    border: none;
+    font-size: 1.15em;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
